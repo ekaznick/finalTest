@@ -1,0 +1,35 @@
+﻿@model Entertainer
+
+<h2>Entertainer Details</h2>
+<br />
+<div>
+    <h4>@Model.EntStageName</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">SSN</dt>
+        <dd class="col-sm-9">@Model.EntSsn</dd>
+
+        <dt class="col-sm-3">Street Address</dt>
+        <dd class="col-sm-9">@Model.EntStreetAddress</dd>
+
+        <dt class="col-sm-3">City</dt>
+        <dd class="col-sm-9">@Model.EntCity</dd>
+
+        <dt class="col-sm-3">State</dt>
+        <dd class="col-sm-9">@Model.EntState</dd>
+
+        <dt class="col-sm-3">Zip Code</dt>
+        <dd class="col-sm-9">@Model.EntZipCode</dd>
+
+        <dt class="col-sm-3">Web Page</dt>
+        <dd class="col-sm-9">@Model.EntWebPage</dd>
+
+        <dt class="col-sm-3">Email Address</dt>
+        <dd class="col-sm-9">@Model.EntEmailAddress</dd>
+
+        <dt class="col-sm-3">Date Entered</dt>
+        <dd class="col-sm-9">@Model.DateEntered?.ToString("yyyy-MM-dd")</dd>
+    </dl>
+</div>
+<a class="btn btn-info" asp-controller="Home" asp-action="EditEnt" asp-route-id="@Model.EntertainerId">Edit</a>
+<a class="btn btn-danger" asp-controller="Home" asp-action="DeleteConfirm" asp-route-id="@Model.EntertainerId">Delete</a>
